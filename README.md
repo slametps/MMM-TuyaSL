@@ -50,3 +50,7 @@ Tuya-based-devices Smarthome Module for MagicMirror<sup>2</sup>. By default, thi
 | `showLabel` | `true` | show header label? |
 | `timeout` | `3000` | how long the discovery should be taken |
 | `animationSpeed` | `2500 ms` (2.5 s) | Speed of the update animation |
+
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
