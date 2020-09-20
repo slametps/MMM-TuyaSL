@@ -187,15 +187,14 @@ module.exports = NodeHelper.create({
             try {
               function myDeviceItem(value, index, array) {
                 deviceOnline = value.data.online;
-                //deviceOnline = (value.data.online === "false" ? false : value.data.online);
                 deviceState = (value.data.state == "true" ? true : (value.data.state == "false" ? false : value.data.state));
                 arrDevicesItem = {alias:value.name, type:value.dev_type, online:deviceOnline, on_off:deviceState};
                 arrDevices.push(arrDevicesItem);
               }
 
               res.data.payload.devices.forEach(myDeviceItem);
-              console.log(`DEBUG: Number of Devices = ${arrDevices.length}`);
-              console.log(`DEBUG: Device-List ${that.dump(arrDevices)}`);
+              //console.log(`DEBUG: Number of Devices = ${arrDevices.length}`);
+              //console.log(`DEBUG: Device-List ${that.dump(arrDevices)}`);
             }
             catch (e) {
               console.log('ERROR: ' + e.stack);
