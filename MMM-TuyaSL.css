@@ -1,0 +1,11 @@
+.MMM-TuyaSL .centered {
+    text-align: center;
+}
+
+.MMM-TuyaSL .lights-all-on{
+   color: yellow
+}
+
+.MMM-TuyaSL .lights-partial-on{
+   color: khaki
+}

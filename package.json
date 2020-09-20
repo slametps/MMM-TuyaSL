@@ -1,0 +1,29 @@
+{
+  "name": "MMM-TuyaSL",
+  "version": "1.0.0",
+  "description": "Display Tuya-based (smart_life) smarthome devices",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slametps/MMM-TuyaSL.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "TuyaSL",
+    "smarthome",
+    "smartlife",
+    "smart_life",
+    "iot",
+    "platform"
+  ],
+  "author": "Slamet Puji Santuso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slametps/MMM-TuyaSL/issues"
+  },
+  "homepage": "https://github.com/slametps/MMM-TuyaSL#readme",
+  "dependencies": {
+    "axios": "latest",
+    "fs": "latest",
+    "qs": "latest"
+  }
+}

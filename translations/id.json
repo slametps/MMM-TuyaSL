@@ -1,0 +1,8 @@
+{
+	"LIGHTS_ON": "Status",
+	"NO_DATA": "Tidak ada data",
+	"TXT_TUYASL": "STATUS Tuya",
+	"TXT_TUYASL_DESC": " menampilkan semua status peralatan IoT/smart-home berbasis Tuya IoT-Platform",
+	"TXT_TUYASL_ON": "NYALA",
+	"TXT_TUYASL_OFF": "PADAM"
+}
