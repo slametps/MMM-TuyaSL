@@ -40,8 +40,10 @@ Module.register("MMM-TuyaSL", {
       var text = "*" + this.translate("TXT_TUYASL") + "*\n";
       if (this.devices) {
         for (var i = 0; i < this.devices.length; i++) {
-          text += "*" + this.devices[i].alias + "*: ";
-          text += "`" + (this.devices[i].on_off == 1 ? this.translate("TXT_TUYASL_ON") : this.translate("TXT_TUYASL_OFF")) + "`\n";
+          if (this.devices[i].type != 'scene') {
+            text += "*" + this.devices[i].alias + "*: ";
+            text += "`" + (this.devices[i].online ? this.translate("TXT_TUYASL_ONLINE") : this.translate("TXT_TUYASL_OFFLINE")) + "/" + (this.devices[i].on_off ? this.translate("TXT_TUYASL_ON") : this.translate("TXT_TUYASL_OFF")) + "`\n";
+          }
         }
       }
       else {

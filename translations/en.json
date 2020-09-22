@@ -3,6 +3,8 @@
 	"NO_DATA": "No data",
 	"TXT_TUYASL": "Tuya STATUS",
 	"TXT_TUYASL_DESC": " all status of installed IoT/smart-home devices on Tuya IoT-Platform",
+  "TXT_TUYASL_ONLINE": "ONLINE",
+	"TXT_TUYASL_OFFLINE": "OFFLINE",  
 	"TXT_TUYASL_ON": "ON",
 	"TXT_TUYASL_OFF": "OFF"
 }
