@@ -4,7 +4,7 @@ Tuya-based-devices Smarthome Module for MagicMirror<sup>2</sup>. By default, thi
 
 ## Example
 
-![](others/MMM-TuyaSL-screenshot-01.png)   ![](others/MMM-TuyaSL-screenshot-02.png)   ![](others/MMM-TuyaSL-photo-01.png)
+![](others/MMM-TuyaSL-screenshot-01.png)   ![](others/MMM-TuyaSL-screenshot-02.png)   ![](others/MMM-TuyaSL-photo-01.jpg)
 
 ## Dependencies
 
