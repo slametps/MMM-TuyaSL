@@ -56,7 +56,8 @@ Module.register("MMM-TuyaSL", {
     start: function () {
         var self = this;
         var devices = [];
-        if (self.config.updateInterval < 300*1000) self.config.updateInterval = 300*1000; // minimal is 300*1000 ms
+        const DEFAULT_INTERVAL = 125;
+        if (self.config.updateInterval < DEFAULT_INTERVAL*1000) self.config.updateInterval = DEFAULT_INTERVAL*1000; // minimal is 300*1000 ms
 
         //this.getLogin();
         this.getData();

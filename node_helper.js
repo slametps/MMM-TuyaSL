@@ -16,11 +16,13 @@ var arrDevices = [];
 var arrDevicesItem;
 var accessToken;
 var loginDataResult = {success: false};
+var regionTuya;
 
 module.exports = NodeHelper.create({
 	// Subclass start method.
 	start: function() {
 		console.log("Starting node_helper.js for MMM-TuyaSL.");
+    regionTuya = 'eu';
 	},
 
   dump: function(v, s) {
@@ -169,7 +171,11 @@ module.exports = NodeHelper.create({
         let params = '{"header": {"name": "Discovery", "namespace": "discovery", "payloadVersion": 1}, "payload": {"accessToken": "' + that.accessToken + '"}}';
 
         try {
-          let res = await axios.post('https://px1.tuyaeu.com/homeassistant/skill', params, configAx);
+          let res = await axios.post('https://px1.tuya' + regionTuya + '.com/homeassistant/skill', params, configAx);
+          console.log(`DEBUG: regionTuya     : ${regionTuya}`);
+          if (regionTuya == 'eu') regionTuya = 'us';
+          else if (regionTuya == 'us') regionTuya = 'cn';
+          else if (regionTuya == 'cn') regionTuya = 'eu';
 
           //console.log(`DEBUG: Status code    : ${res.status}`);
           //console.log(`DEBUG: Status text    : ${res.statusText}`);
@@ -183,17 +189,18 @@ module.exports = NodeHelper.create({
           //console.log(`DEBUG: Data.code      : ${res.data.header.code}`);
           //console.log(`DEBUG: Data.payloadVersion: ${res.data.header.payloadVersion}`);
 
-          if (res.data.header.code === 'SUCCESS') {
+          if ("header" in res.data && "code" in res.data.header && res.data.header.code === 'SUCCESS') {
             try {
               function myDeviceItem(value, index, array) {
                 deviceOnline = value.data.online;
+                //deviceOnline = (value.data.online === "false" ? false : value.data.online);
                 deviceState = (value.data.state == "true" ? true : (value.data.state == "false" ? false : value.data.state));
                 arrDevicesItem = {alias:value.name, type:value.dev_type, online:deviceOnline, on_off:deviceState};
                 arrDevices.push(arrDevicesItem);
               }
 
               res.data.payload.devices.forEach(myDeviceItem);
-              //console.log(`DEBUG: Number of Devices = ${arrDevices.length}`);
+              console.log(`DEBUG: Number of Devices = ${arrDevices.length}`);
               //console.log(`DEBUG: Device-List ${that.dump(arrDevices)}`);
             }
             catch (e) {
