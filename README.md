@@ -13,24 +13,28 @@ Tuya-based-devices Smarthome Module for MagicMirror<sup>2</sup>. By default, thi
 ## Installation
 
 1. Clone this repo into `~/MagicMirror/modules` directory.
+   `cd ~/MagicMirror/modules`
+   `git clone https://github.com/slametps/MMM-TuyaSL.git`
 2. Go to `~/MagicMirror/modules/MMM-TuyaSL` directory and do `npm install`
+   `cd ~/MagicMirror/modules/MMM-TuyaSL`
+   `npm install`
 3. Configure your `~/MagicMirror/config/config.js`:
 
     ```
     {
-        module: 'MMM-TuyaSL',
-        position: 'top_right',
-        header: 'TuyaSL',
-        config: {
-	  userName: 'your_smartlife_username',
-	  password: 'your_smartlife_password',
-	  countryCode: 'ID',
-	  showOnlyOnline: true,
-	  showOnlyOn: false,
-	  colour: false,
-	  updateInterval: 300 * 1000,
-	  timeout: 10 * 1000,
-        }
+      module: 'MMM-TuyaSL',
+      position: 'top_right',
+      header: 'TuyaSL',
+      config: {
+        userName: 'your_smartlife_username',
+        password: 'your_smartlife_password',
+        countryCode: 'ID',
+        showOnlyOnline: true,
+        showOnlyOn: false,
+        colour: false,
+        updateInterval: 300 * 1000,
+        timeout: 10 * 1000,
+      }
     }
     ```
 
