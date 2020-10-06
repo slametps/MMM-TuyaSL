@@ -13,7 +13,11 @@ Tuya-based-devices Smarthome Module for MagicMirror<sup>2</sup>. By default, thi
 ## Installation
 
 1. Clone this repo into `~/MagicMirror/modules` directory.
+   `cd ~/MagicMirror/modules`
+   `git clone https://github.com/slametps/MMM-TuyaSL.git`
 2. Go to `~/MagicMirror/modules/MMM-TuyaSL` directory and do `npm install`
+   `cd ~/MagicMirror/modules/MMM-TuyaSL`
+   `npm install`
 3. Configure your `~/MagicMirror/config/config.js`:
 
     ```
