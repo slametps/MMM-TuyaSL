@@ -45,7 +45,7 @@ Tuya-based-devices Smarthome Module for MagicMirror<sup>2</sup>. By default, thi
 | `userName` | (mandatory) | your tuya-smartlife account username |
 | `password` | (mandatory) | your tuya-smartlife account password |
 | `countryCode` | `ID` | Your country code, e.g. ID, US, EU, etc |
-| `bizType` | `smart_life` | default bizType for Tuya |
+| `bizType` | `smart_life` | default bizType for SmartLife app user. Use `tuya` for Tuya app user. |
 | `from` | `tuya` | please leave unchanged |
 | `colour` | `false` | displaying power status in colour or not |
 | `updateInterval` | `300000 ms` (5 minutes) | how often should the devices states refreshed (minimal is 5 minutes => Tuya policy) |
