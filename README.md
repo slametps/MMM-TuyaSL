@@ -22,19 +22,19 @@ Tuya-based-devices Smarthome Module for MagicMirror<sup>2</sup>. By default, thi
 
     ```
     {
-        module: 'MMM-TuyaSL',
-        position: 'top_right',
-        header: 'TuyaSL',
-        config: {
-	  userName: 'your_smartlife_username',
-	  password: 'your_smartlife_password',
-	  countryCode: 'ID',
-	  showOnlyOnline: true,
-	  showOnlyOn: false,
-	  colour: false,
-	  updateInterval: 300 * 1000,
-	  timeout: 10 * 1000,
-        }
+      module: 'MMM-TuyaSL',
+      position: 'top_right',
+      header: 'TuyaSL',
+      config: {
+        userName: 'your_smartlife_username',
+        password: 'your_smartlife_password',
+        countryCode: 'ID',
+        showOnlyOnline: true,
+        showOnlyOn: false,
+        colour: false,
+        updateInterval: 300 * 1000,
+        timeout: 10 * 1000,
+      }
     }
     ```
 
